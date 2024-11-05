@@ -24,20 +24,22 @@
     padding: 20px;
   }
   
+  .title, .subtitle, .nav ul li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
   .title {
     font-size: 2.5rem;
     color: #333;
+    animation-delay: 0.5s;
   }
   
   .subtitle {
     font-size: 1.2rem;
     color: #777;
-  }
-  
-  .nav ul {
-    list-style: none;
-    margin-top: 1.5rem;
-    padding: 0;
+    animation-delay: 1s;
   }
   
   .nav ul li {
@@ -129,6 +131,17 @@
     color: green;
     font-size: 1rem;
     text-align: center;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   /* Responsive Styles */
